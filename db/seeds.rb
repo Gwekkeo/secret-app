@@ -9,5 +9,5 @@ User.delete_all
 nb_user = 2
 # nb_user.times do
 	User.create(email: Faker::Internet.email, password: 'azerty')
-	User.create(email: Faker::Internet.email, password: 'motdpasse')
+	User.create(email: Faker::Internet.email, password: '123456')
 # end

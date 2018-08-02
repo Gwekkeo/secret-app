@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
 			redirect_to user_path(mon_user.id)
 		else
-			redirect_to "/login"
+			render 'new'
 		end
 	end
 

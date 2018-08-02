@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def create
     mon_user = User.new(email: params[:email] , password: params[:password])
     if mon_user.save
+        log_in(mon_user)
   	  	redirect_to '/'
       end
   end
