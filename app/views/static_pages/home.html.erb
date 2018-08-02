@@ -18,9 +18,10 @@
 	  <h1>Bienvenue !</h1>
 	  <h3> Et si on inscrivait des étudiants ? 🎓 </h3>
 	  <%= link_to "New Student", users_path, class: "btn btn-lg btn-primary" %>
+	   <%= link_to "GO Page Secrete", nil, class: "btn btn-lg btn-thirdy" %>
 	</div>
 
-	<h2>TOUT LES EMAILS:</h2>
+	<h2>TOUS LES EMAILS:</h2>
 	<ul>
 		<% @users_tab.each do |user| %>
 		<li> <a href="<%= user_path(user.id) %>"> <%= user.email %> </a> 
