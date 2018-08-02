@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+</head>
+<body>
+	  <header>
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item"> <a class="nav-link active" href="<%= root_path%>" >Accueil</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/" >Connexion</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="<%= users_path %>" >Inscription</a> </li>
+      </ul>
+    </header>
+<!-- users = possède GET & POST -->
+
+	<div class="center jumbotron">
+	  <h1>Bienvenue !</h1>
+	  <h3> Et si on inscrivait des étudiants ? 🎓 </h3>
+	  <%= link_to "New Student", users_path, class: "btn btn-lg btn-primary" %>
+	</div>
+
+	<h2>TOUT LES EMAILS:</h2>
+	<ul>
+		<% @users_tab.each do |user| %>
+		<li> <a href="<%= user_path(user.id) %>"> <%= user.email %> </a> 
+			<%= link_to "Editer ce mail", edit_user_path(user.id), class: "btn btn-primary" %>
+			<a href="<%= user_path(user.id) %>" class="btn btn-danger" data-method="delete">DELETE</a>
+		 </li>
+		<% end %>
+	</ul>
+
+
+
+
+</body>
+</html>

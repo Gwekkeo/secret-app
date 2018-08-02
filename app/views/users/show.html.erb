@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+</head>
+<body>
+	  <header>
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item"> <a class="nav-link active" href="<%= root_path%>" >Accueil</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/" >Connexion</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="<%= users_path %>" >Inscription</a> </li>
+      </ul>
+    </header>
+<!-- users = possède GET & POST -->
+
+	<div class="center jumbotron">
+		<h1>User N°<%= @id %> </h1>
+		<p>
+			<strong>Email: </strong>
+			<%= @user.email %>
+		</p>
+	</div>
+
+
+
+
+</body>
+</html>

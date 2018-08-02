@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EDIT USER</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+</head>
+<body>
+	<header>
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item"> <a class="nav-link" href="<%= root_path%>" >Accueil</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/" >Connexion</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="<%= users_path %>" >Inscription</a> </li>
+      </ul>
+    </header>
+
+
+
+    <div class="center jumbotron">
+    	<h1>Editons l'User <%= @id+ ' ' +@email%> </h1>
+	
+    	<%= form_for @user do |f| %>
+	    	<div class="form-group">
+				<label>Entrer un nouvel Email</label>
+	    		<%= f.text_field :email, class: 'form-control' %>
+			</div>
+
+			<div class="form-group">
+				<label>Entrer votre Password OU votre NOUVEAU password</label>
+	    		<%= f.text_field :password, class: 'form-control' %>				
+			</div>
+
+			<div>
+				<button type="submit" class="btn btn-primary">Modifier l'User</button>
+			</div>
+    	<% end %>
+
+	</div>
+
+</body>
+</html>
