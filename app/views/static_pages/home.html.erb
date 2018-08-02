@@ -27,7 +27,13 @@
 	  <h1>Bienvenue !</h1>
 	  <h3> Et si on inscrivait des étudiants ? 🎓 </h3>
 	  <%= link_to "New Student", users_path, class: "btn btn-lg btn-primary" %>
+
+	  <% if logged_in? %>
 	   <%= link_to "GO Page Secrete", "/secret-page", class: "btn btn-lg btn-warning" %>
+	  <% else %>
+	   <%= link_to "GO Page Secrete", "/login", class: "btn btn-lg btn-warning" %>
+	  <% end %>
+
 	</div>
 
 	<h2>TOUS LES EMAILS:</h2>
