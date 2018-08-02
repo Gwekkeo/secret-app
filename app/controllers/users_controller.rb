@@ -12,6 +12,11 @@ class UsersController < ApplicationController
   def show
   	@id = params[:id]
   	@user = User.find(@id)
+
+    puts "-"*50
+    print "\tES-TU ES-TU LOGGER :"
+    puts logged_in?
+    puts "-"*50
   end
 
   def edit
@@ -34,6 +39,11 @@ class UsersController < ApplicationController
     @user.destroy
 
     redirect_to root_path
+  end
+
+
+  def secret
+
   end
 
 

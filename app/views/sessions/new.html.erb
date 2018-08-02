@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SESSION LOGIN</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+</head>
+<body>
+	  <header>
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item"> <a class="nav-link" href="<%= root_path%>" >Accueil</a> </li>
+        <li class="nav-item"> <a class="nav-link active" href="/login" >Connexion</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="<%= users_path %>" >Inscription</a> </li>
+      </ul>
+    </header>
+
+	<div class="center jumbotron">
+		<h1>View INDEX (pour se LOGIN ici) du controller sessions </h1> 
+
+		<%= link_to "Bleu", "/secret-page", class: "btn btn-lg btn-primary" %>
+		<%= link_to "Jaune", "/secret-page", class: "btn btn-lg btn-warning" %>
+
+		<br><br>
+		<%= form_for(:session, url: login_path) do |f| %>
+
+			<%= f.label :email %>
+			<%= f.email_field :email, class: 'form-control' %>
+
+			<%= f.label :password%>
+			<%= f.password_field :password, class: 'form-control' %>
+			<br>
+			<%= f.submit "Log In", class: "btn btn-primary btn-lg"%>
+		<% end %>
+		<br>
+		<p>New user? <%= link_to "Sign up now!", users_path%> 	</p>
+
+	</div>
+
+
+</body>
+</html>

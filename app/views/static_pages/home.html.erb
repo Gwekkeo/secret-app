@@ -8,7 +8,7 @@
 	  <header>
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item"> <a class="nav-link active" href="<%= root_path%>" >Accueil</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="/" >Connexion</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/login" >Connexion</a> </li>
         <li class="nav-item"> <a class="nav-link" href="<%= users_path %>" >Inscription</a> </li>
       </ul>
     </header>
@@ -18,7 +18,7 @@
 	  <h1>Bienvenue !</h1>
 	  <h3> Et si on inscrivait des étudiants ? 🎓 </h3>
 	  <%= link_to "New Student", users_path, class: "btn btn-lg btn-primary" %>
-	   <%= link_to "GO Page Secrete", nil, class: "btn btn-lg btn-thirdy" %>
+	   <%= link_to "GO Page Secrete", "/secret-page", class: "btn btn-lg btn-warning" %>
 	</div>
 
 	<h2>TOUS LES EMAILS:</h2>
