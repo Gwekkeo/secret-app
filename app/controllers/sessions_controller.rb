@@ -8,9 +8,13 @@ class SessionsController < ApplicationController
 		mon_user = User.find_by(email: @email.downcase)
 
 		if mon_user && mon_user.authenticate(params[:session][:password])
-			puts logged_in?
 			log_in(mon_user)
-			puts logged_in?
+			current_user
+			
+			puts "_"*50
+			puts "Logger : #{logged_in?}"
+			puts "_"*50
+
 			redirect_to user_path(mon_user.id)
 		else
 			redirect_to "/login"
@@ -18,6 +22,8 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
+		log_out
+		redirect_to root_path
 	end
 
 end
