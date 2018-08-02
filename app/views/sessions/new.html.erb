@@ -8,7 +8,7 @@
 	<header>
 	      <ul class="nav nav-pills nav-fill">
 	        <li class="nav-item"> <a class="nav-link" href="<%= root_path%>" >Accueil</a> </li>
-	        <li class="nav-item"> <a class="nav-link" href="/login" >Connexion</a> </li>
+	        <li class="nav-item"> <a class="nav-link active" href="/login" >Connexion</a> </li>
 	        <li class="nav-item"> <a class="nav-link" href="<%= users_path %>" >Inscription</a> </li>
 	        <% if logged_in? %>
 	        <li class="nav-item" >
@@ -16,9 +16,9 @@
 			</li>
 	        <% else %>
 	        	<li class="nav-item" >
-	        		 <%= link_to "Log in", login_path %> 
+	        		 <%= link_to "Log in", "/login", class: 'nav-link'%> 
 	        	</li>
-	        <% end %>
+	    	<% end %>
 		</ul>
 	</header>
 

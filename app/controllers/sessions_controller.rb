@@ -9,11 +9,6 @@ class SessionsController < ApplicationController
 
 		if mon_user && mon_user.authenticate(params[:session][:password])
 			log_in(mon_user)
-			current_user
-			
-			puts "_"*50
-			puts "Logger : #{logged_in?}"
-			puts "_"*50
 
 			redirect_to user_path(mon_user.id)
 		else
