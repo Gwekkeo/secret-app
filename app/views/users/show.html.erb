@@ -27,7 +27,12 @@
 		<h1>User N°<%= @id %> </h1>
 		<p>
 			<strong>Email: </strong>
-			<%= @user.email %>
+			<%= @user.email %> <br><br>
+
+			<% if @current_user != nil && @current_user.id == @user.id %>
+				<%= link_to "Editer ce mail", edit_user_path(params[:id]), class: "btn btn-primary" %>
+				<a href= <%= user_path(params[:id]) %> class="btn btn-danger" data-method="delete">DELETE</a>
+			<% end %>
 		</p>
 	</div>
 

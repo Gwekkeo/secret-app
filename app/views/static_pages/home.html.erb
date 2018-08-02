@@ -39,16 +39,9 @@
 	<h2>TOUS LES EMAILS:</h2>
 	<ul>
 		<% @users_tab.each do |user| %>
-		<li> <a href="<%= user_path(user.id) %>"> <%= user.email %> </a> <br> 
-			<%= link_to "Editer ce mail", edit_user_path(user.id), class: "btn btn-primary" %>
-			<a href="<%= user_path(user.id) %>" class="btn btn-danger" data-method="delete">DELETE</a>
-		 </li>
-		 <br>
+		<li> <a href="<%= user_path(user.id) %>"> <%= user.email %> </a> </li>
 		<% end %>
 	</ul>
-
-
-
 
 </body>
 </html>
