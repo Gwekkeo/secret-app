@@ -40,4 +40,4 @@ $ localhost:4567
 ### Version ruby
 ruby '2.5.1'
 
-Fait par CASSAND Gwendoline
+Fait par C.Gwendoline
